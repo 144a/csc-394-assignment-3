@@ -1,0 +1,45 @@
+doctype html
+
+html 
+    head
+    title Team #{teamNumber}
+body
+    h1 Database Version
+    p #{databaseVersion}
+
+    h2 Team Members
+
+    form(name="add-team-member", method="post")
+        div.input
+            span.label First Name
+            input(type="text", name="first_name")
+
+        div.input
+            span.label Last Name
+            input(type="text", name="last_name")
+
+        div.actions
+            input(type="submit", value="add")
+
+    table
+        thead
+            tr
+                td First Name
+                td Last Name
+        tbody
+            tr
+                td #{teamMember[0].last_name}
+                td #{teamMember[0].first_name}
+            tr
+                td #{teamMember[1].last_name}
+                td #{teamMember[1].first_name}
+            tr
+                td #{teamMember[2].last_name}
+                td #{teamMember[2].first_name}
+            tr
+                td #{teamMember[3].last_name}
+                td #{teamMember[3].first_name}
+            tr
+                td #{teamMember[4].last_name}
+                td #{teamMember[4].first_name}
+
